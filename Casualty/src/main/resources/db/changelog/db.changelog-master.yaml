@@ -23,9 +23,5 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: true
-              - column:
-                  name: idno
-                  type: varchar(255)
-                  constraints:
-                    nullable: true
+              
              
