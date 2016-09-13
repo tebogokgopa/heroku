@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: jkutner
+      changes:
+        - createTable:
+            tableName: record
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: surname
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: idno
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+             
