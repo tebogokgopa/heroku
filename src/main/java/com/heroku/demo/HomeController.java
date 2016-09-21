@@ -39,7 +39,7 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value = "/adoption/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/client/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Record> getRecord(@PathVariable("id") long id) {
         Record record = repository.findOne(id);
         if (record == null) {
@@ -50,7 +50,7 @@ public class HomeController {
 
 
     //---------------------Retrieve List of Adoptions---------------------------------------------------
-    @RequestMapping(value = "/adoptions/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/clients/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Record>> getOneRecord()
     {
         List<Record> record = repository.findAll();
@@ -72,7 +72,7 @@ public class HomeController {
         return home(model);
     }
     
- @RequestMapping(value = "/adoption/create", method = RequestMethod.POST)
+ @RequestMapping(value = "/client/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
     {
         repository.save(record);
@@ -83,7 +83,7 @@ public class HomeController {
 
     
     
-    @RequestMapping(value = "/adoption/delete/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/client/delete/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<Record> deleteRecord(@PathVariable("id")long id)
     {
         System.out.println("Fetching & Deleting Adoption with id" + id);

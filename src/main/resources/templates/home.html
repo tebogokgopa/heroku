@@ -2,7 +2,7 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>PET Management App</title>
+    <title>Client Info</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -13,7 +13,7 @@
 <body>
  <div style="color:white;background-color:blue;width:100%; height:auto; margin-bottom:15px;">
     <div style="color:white;width:100%; heigh:160px;text-align:center;" >
-        <span  style="font-size:17pt">Pet Management App</span>
+        <span  style="font-size:17pt">Client Info</span>
     </div>
 </div>
 <div class="container">
@@ -23,14 +23,12 @@
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                   <label for="data">Animal Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Animal name" th:field="*{animalname}" />
-                    <label for="data">Adopter Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Name" th:field="*{adoptername}" />
-                    <label for="data">Adopter Surname</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{adoptersurname}" />
-                    <label for="data">Phone Number</label>
-                  <input id="data" type="text" class="form-control" placeholder="phonenumber" th:field="*{phonenumber}" />
+                   <label for="data">Client Name</label>
+                    <input id="data" type="text" class="form-control" placeholder="First name" th:field="*{name}" />
+                    <label for="data">Client Id Number</label>
+                    <input id="data" type="text" class="form-control" placeholder="ID Number" th:field="*{idno}" />
+                    <label for="data">Client Surname</label>
+                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{surname}" />
                   </div>
                 <button type="submit" class="btn btn-default">Add</button>
             </form>
@@ -43,16 +41,15 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Adoptions</th>
+                        <th>Clients</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="record : ${records}">
                         <td th:text="${record.id}">Some text</td>
-                        <td th:text="${record.animalname}">Some text</td>
-                        <td th:text="${record.adoptername}">Some text</td>
-                        <td th:text="${record.adoptersurname}">Some text</td>
-                        <td th:text="${record.phonenumber}">Some text</td>
+                        <td th:text="${record.name}">Some text</td>
+                        <td th:text="${record.surname}">Some text</td>
+                        <td th:text="${record.idno}">Some text</td>
                 </tr>
                 </tbody>
             </table>

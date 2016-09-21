@@ -39,7 +39,7 @@ public class Record {
       this.surname = surname;
  }
     
- public String getSurName() {
+ public String getSurname() {
         return surname;
     }   
     
