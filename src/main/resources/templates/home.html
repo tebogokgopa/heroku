@@ -24,13 +24,13 @@
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
                    <label for="data">Appointment Date</label>
-                    <input id="data" type="text" class="form-control" placeholder="First name" th:field="*{appdate}" />
+                    <input id="data" type="text" class="form-control" placeholder="First name" th:field="*{name}" />
                     <label for="data">Appointment Time</label>
-                    <input id="data" type="text" class="form-control" placeholder="ID Number" th:field="*{apptime}" />
+                    <input id="data" type="text" class="form-control" placeholder="ID Number" th:field="*{surname}" />
                     <label for="data">Patient Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{patient}" />
+                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{idno}" />
                     <label for="data">Doctor Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{doctor}" />
+                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{idno}" />
                   </div>
                 <button type="submit" class="btn btn-default">Add</button>
             </form>
