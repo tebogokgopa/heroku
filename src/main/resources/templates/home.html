@@ -13,7 +13,7 @@
 <body>
  <div style="color:white;background-color:blue;width:100%; height:auto; margin-bottom:15px;">
     <div style="color:white;width:100%; heigh:160px;text-align:center;" >
-        <span  style="font-size:17pt">Client Info</span>
+        <span  style="font-size:17pt">Appointment Info</span>
     </div>
 </div>
 <div class="container">
@@ -30,7 +30,7 @@
                     <label for="data">Patient Name</label>
                     <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{idno}" />
                     <label for="data">Doctor Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{idno}" />
+                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{doc}" />
                   </div>
                 <button type="submit" class="btn btn-default">Add</button>
             </form>
@@ -52,6 +52,7 @@
                         <td th:text="${record.name}">Some text</td>
                         <td th:text="${record.surname}">Some text</td>
                         <td th:text="${record.idno}">Some text</td>
+                        <td th:text="${record.doc}">Some text</td>
                 </tr>
                 </tbody>
             </table>
