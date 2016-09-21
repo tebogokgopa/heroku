@@ -16,7 +16,6 @@ public class Record {
     private String idno;
     private String name;
     private String surname;
-    private String doc;
 
 
 
@@ -52,13 +51,7 @@ public class Record {
     public String getIdno() {
         return idno;
     }
-    public void setDoc(String doc) {
-	   this.doc = doc;
-   }
-
-    public String getDoc() {
-        return doc;
-    }
+    
 
  }
     

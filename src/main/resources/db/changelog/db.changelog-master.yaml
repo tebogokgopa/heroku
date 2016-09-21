@@ -28,8 +28,4 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: true
-             - column:
-                  name: doc
-                  type: varchar(255)
-                  constraints:
-                    nullable: true
+             
