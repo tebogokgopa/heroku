@@ -13,7 +13,7 @@
 <body>
  <div style="color:white;background-color:blue;width:100%; height:auto; margin-bottom:15px;">
     <div style="color:white;width:100%; heigh:160px;text-align:center;" >
-        <span  style="font-size:17pt">Client Info</span>
+        <span  style="font-size:17pt">Appointment Info</span>
     </div>
 </div>
 <div class="container">
@@ -23,12 +23,12 @@
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                   <label for="data">Client Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="First name" th:field="*{name}" />
-                    <label for="data">Client Id Number</label>
-                    <input id="data" type="text" class="form-control" placeholder="ID Number" th:field="*{idno}" />
-                    <label for="data">Client Surname</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{surname}" />
+                   <label for="data">Appointment Date</label>
+                    <input id="data" type="text" class="form-control" placeholder="Appointment Date" th:field="*{name}" />
+                    <label for="data">Appointment Time</label>
+                    <input id="data" type="text" class="form-control" placeholder="Appointment Time" th:field="*{idno}" />
+                    <label for="data">Doctor Name</label>
+                    <input id="data" type="text" class="form-control" placeholder="Doctor Name" th:field="*{surname}" />
                   </div>
                 <button type="submit" class="btn btn-default">Add</button>
             </form>
@@ -41,7 +41,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Clients</th>
+                        <th>Appointments</th>
                     </tr>
                 </thead>
                 <tbody>
